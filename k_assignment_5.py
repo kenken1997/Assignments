@@ -42,6 +42,7 @@ while True:
  
     # Option 4: Exit the program 
     elif choice == 4:
+        print("Goodbye")
         break
 
     # Handle any invalid choices
