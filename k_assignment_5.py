@@ -1,16 +1,17 @@
 #initializing the books variable as an empty list
 books = []
 
+# Display welcome message 
+print('Welcome to the Book Title Library!')
+
 #initializing the loop for program
 while True:
-
-    # Display welcome message and menu options
-    print('Welcome to the Book Title Library')
-
+    
+    #Display menu options
     print('''Select one of these options to continue:
-1. Add a Book
-2. Remove a Book
-3. View All Books
+1. Add a Book Title/ Add Book Titles
+2. Remove a Book Title
+3. View All Book Titles
 4. Exit
 ''')
     
@@ -29,16 +30,17 @@ while True:
     # Option 2: Remove a book (one at a time)
     elif choice == 2:
         print('Which book would you like to delete today? (Only one entry can be deleted at a time)')
-        del_book = input('enter book title you want deleted: ')
+        del_book = input('Enter book title you want deleted: ')
         if del_book in books:
             books.remove(del_book)
+            print(f'Your updated list of books is {books}')
         else:
-            print('invalid entry. book not found')
-        print(f'your updated list of books is {books}')
-    
+            print('Invalid entry. Book not found')
+            print(f'Valid list of books is {books}')
+        
     # Option 3: View all books in the library
     elif choice == 3:
-        print(f'all the books you have logged are {books}')
+        print(f'All the books you have logged are {books}')
  
     # Option 4: Exit the program 
     elif choice == 4:
@@ -47,7 +49,7 @@ while True:
 
     # Handle any invalid choices
     else:
-        print('invalid choice. try again')
+        print('Invalid choice. Try again')
 
 
 
