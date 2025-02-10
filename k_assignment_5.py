@@ -31,9 +31,11 @@ while True:
     elif choice == '2':
         print('Which book would you like to delete today? (Only one entry can be deleted at a time)')
         del_book = input('Enter book title you want deleted: ')
+        #if book is in database, delete
         if del_book in books:
             books.remove(del_book)
             print(f'Your updated list of books is {books}')
+        #error message for if book is not in database
         else:
             print('Invalid entry. Book not found')
             print(f'Valid list of books is {books}')
