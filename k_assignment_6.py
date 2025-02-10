@@ -19,35 +19,35 @@ while True:
     #if user enters '1', add student + their details
     if choice == '1':
         s_name = input('Enter student name: ').title()
-        s_age = int(input('Enter student age: '))
+        s_age = input('Enter student age: ')
         s_grade = input('Enter student grade: ').title()
         s_course = input('Enter student course: ').title()
         print(f'{s_name} has been added to the system')
 
-    #add all details entered into 'student dictionary
+    #add all details entered into 'student' dictionary
         student = {
         'name': s_name,
         'age': s_age,
         'grade': s_grade,
         'course': s_course
     }
-        #append student dictionary into 'data' list 
+    #append student dictionary into 'data' list 
         data.append(student)
 
     #if user enters "2", remove a stduent
     elif choice == '2':
         rem_student = input('Enter student name to remove: ').title()
-    #sets flag to false to intialize a loop
-    found = False  
-    for student in data:         #loops through the data list for 'student'
-        if student['name'] == rem_student:      #if user input matches a value in student dictionary, delete said dictionary
+    #initializes flag as False, meaning student has not been found yet
+        found = False  
+        for student in data:         #loops through the data list for 'student'
+          if student['name'] == rem_student:      #if user input matches a value for name key in student dictionary, delete said dictionary
             data.remove(student)  
             print(f'{rem_student} has been removed from the system')
             found = True       #sets found to true if a match is found
             break            #breaks out of loop
     #if after looping, no value matched, print 'student not found'
-    if not found:
-        print(f'{rem_student} not found in the system')
+        if not found:
+          print(f'{rem_student} not found in the system')
 
     #if user enters "3", print all student dictionaries in data list
     elif choice == '3':
