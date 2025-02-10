@@ -22,10 +22,10 @@ while True:
     if choice == '1':
         print('Great! Which book would you be adding today?')
         add_book = [title.strip() for title in input('Type in title of book (Multiple book entries should be separated by a comma): ').split(',')]
-        print(f'{add_book} have been added')
-        # Append the new books to the existing list
+        # Add the new book(s) to the existing list
         books.extend(add_book)
-        print(f'This is all the books in the library: {books}')
+        # print(f'This is all the books in the library: {books}')
+        print(f'{", ".join(add_book)} have been added to the library')
 
     # Option 2: Remove a book (one at a time)
     elif choice == '2':
