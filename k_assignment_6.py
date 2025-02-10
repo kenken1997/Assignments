@@ -36,18 +36,17 @@ while True:
 
     #if user enters "2", remove a stduent
     elif choice == '2':
+        #asks for user to enter a name to remove
         rem_student = input('Enter student name to remove: ').title()
-    #initializes flag as False, meaning student has not been found yet
-        found = False  
-        for student in data:         #loops through the data list for 'student'
-            if student['name'] == rem_student:      #if user input matches a value for name key in student dictionary, delete said dictionary
-               data.remove(student)  
-               print(f'{rem_student} has been removed from the system')
-               found = True       #sets found to true if a match is found
-               break            #breaks out of loop
-    #if after looping, no value matched, print 'student not found'
-        if not found:
-          print(f'{rem_student} not found in the system')
+        for student in data:             #loops through the data list to search for user input
+            if student['name'] == rem_student:           #if the user input matches a student in the list, delete that student's dictionary
+               data.remove(student)
+            print(f'{rem_student} has been removed from the system')
+            break
+        else:
+        #prints a statement if student in not found
+             print(f'{rem_student} not found in the system')
+
 
     #if user enters "3", print all student dictionaries in data list
     elif choice == '3':
