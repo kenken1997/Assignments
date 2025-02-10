@@ -40,9 +40,9 @@ while True:
         rem_student = input('Enter student name to remove: ').title()
         for student in data:             #loops through the data list to search for user input
             if student['name'] == rem_student:           #if the user input matches a student in the list, delete that student's dictionary
-               data.remove(student)
-            print(f'{rem_student} has been removed from the system')
-            break
+                data.remove(student)
+                print(f'{rem_student} has been removed from the system')
+                break
         else:
         #prints a statement if student in not found
              print(f'{rem_student} not found in the system')
