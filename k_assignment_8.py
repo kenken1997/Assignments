@@ -28,6 +28,7 @@ def deposit_money(balance, transactions):
         print('Please enter a higher amount. Deposit value too low')
         return balance
     balance += deposit
+    print(f'Deposit of {deposit} cedis successful.')
     print(f'Your new balance is {balance} cedis. \n')
     transactions.append(f"Deposited: {deposit} cedis, New balance: {balance} cedis")
     return balance
@@ -41,6 +42,7 @@ def withdraw_money(balance, transactions):
             print(f'Cannot withdraw {withdraw} cedis. Invalid input')
         elif withdraw <= balance:
             balance -= withdraw
+            print(f'Withdrawal of {withdraw} cedis succesful')
             print(f'Amount of {withdraw} cedis has been deducted from your account. New balance is {balance} cedis. \n')
             transactions.append(f"Withdrew: {withdraw} cedis, New balance: {balance} cedis")
             return balance
