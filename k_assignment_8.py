@@ -92,7 +92,7 @@ def main():
             print('Exiting program. \n')
             break
         else:
-            print('invalid input')
+            print('Invalid input. Enter (1-5). \n')
     
 
 
