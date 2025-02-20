@@ -17,6 +17,7 @@ def get_valid_int(prompt, error_message="Invalid input. Enter a numeric value.\n
     
 def check_balance(balance, transactions):
     print(f'Your balance is {balance} cedis. \n')
+    
     transactions.append(f"Checked balance: {balance} cedis")
     return balance
 
@@ -30,6 +31,7 @@ def deposit_money(balance, transactions):
     balance += deposit
     print(f'Deposit of {deposit} cedis successful.')
     print(f'Your new balance is {balance} cedis. \n')
+    
     transactions.append(f"Deposited: {deposit} cedis, New balance: {balance} cedis")
     return balance
 
@@ -44,6 +46,7 @@ def withdraw_money(balance, transactions):
             balance -= withdraw
             print(f'Withdrawal of {withdraw} cedis succesful')
             print(f'Amount of {withdraw} cedis has been deducted from your account. New balance is {balance} cedis. \n')
+            
             transactions.append(f"Withdrew: {withdraw} cedis, New balance: {balance} cedis")
             return balance
         
