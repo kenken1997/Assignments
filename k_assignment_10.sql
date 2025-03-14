@@ -30,5 +30,5 @@ CREATE TABLE Borrowers (
 );
 
 INSERT INTO Borrowers (id, name, book_id, borrow_date, return_date) VALUES
-(1, 'Alice Johnson', 1, '2024-03-01', '2024-03-15'),
-(2, 'Bob Smith', 3, '2024-03-05', '2024-03-20');
+(1, 'Kwaku Ansah', 1, '2024-03-01', '2024-03-15'),
+(2, 'Peace Reginald', 3, '2024-03-05', '2024-03-20');
