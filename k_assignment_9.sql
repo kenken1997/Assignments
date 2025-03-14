@@ -6,9 +6,9 @@ CREATE TABLE Product (
 );
 
 INSERT INTO Product (id, product_name, category, price) VALUES
-(1, 'Laptop', 'Electronics', 800.00),
+(1, 'Pillow', 'Bedroom Accessory', 800.00),
 (2, 'Headphones', 'Electronics', 50.00),
-(3, 'Desk Chair', 'Furniture', 120.00),
+(3, 'Ladle', 'Kitchen Accessory', 120.00),
 (4, 'Notebook', 'Stationery', 5.00),
 (5, 'Pen', 'Stationery', 2.00);
 
